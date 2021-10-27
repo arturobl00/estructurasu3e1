@@ -1,0 +1,66 @@
+switch (opc)
+        {
+        case 1:
+            printf("Proceso para agregar datos al arreglo: \n");
+            break;
+
+        case 2:
+            printf("Proceso para motrar datos al arreglo: \n");
+            break;
+        
+        case 3:
+            interruptor = 0;
+            break;
+        default:
+            printf("Esa opcion no esta en el menu intente de nuevo\n");
+            getch();
+            break;
+        }
+
+if(opc == 1){
+    printf("Proceso para agregar datos al arreglo: \n");
+}
+else{
+    if(opc == 2){
+        printf("Proceso para motrar datos al arreglo: \n");
+    }
+    else{
+        if(opc == 3){
+            interruptor = 0;
+        }
+        else{
+            printf("Esa opcion no esta en el menu intente de nuevo\n");
+        }
+    }
+}
+
+
+
+if(dato == 1){
+                if(posdecremento < 0){
+                    printf("El arreglo esta lleno...");
+                    getch();
+                }
+                else{
+                    printf("Proporcione el dato: ");
+                    scanf("%d",&datospila[posdecremento]);
+                    posdecremento--;
+                }
+            }
+            else{
+                if(dato == 2){
+                    if(posincremento > 19){
+                    printf("El arreglo esta lleno...");
+                    getch();
+                }
+                else{
+                    printf("Proporcione el dato: ");
+                    scanf("%d",&datoscola[posincremento]);
+                    posincremento++;
+                }
+                }
+                else{
+                    printf("Opc no valida el proceso se reanudara...");
+                    getch();
+                }
+            }
