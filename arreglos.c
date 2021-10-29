@@ -4,7 +4,7 @@
 //El programa original trabaja con 20 posiciones
 int datospila[3];
 int datoscola[3];
-int x, interruptor, opc, metodo;
+int x, interruptor, opc, metodo, pose;
 int posincremento, posdecremento;
 void main(){
     printf("Unidad 3 Trabajando con estructuras lineales - Arreglo");
@@ -64,6 +64,36 @@ void main(){
             printf("Proceso para eliminar datos al arreglo: \n");
             printf("Que Arreglo desea 1 pila o 2 cola:");
             scanf("%d",&metodo);
+            if(metodo == 1){
+                if(datospila[2] != NULL){
+                    mostrardatos(metodo);
+                    printf("Que pos deseas eliminar: ");
+                    scanf("%d",&pose);
+                    eliminar(pose);
+                }
+                else{
+                    printf("El Arreglo no tienen datos\n");
+                    getch();
+                }
+            }
+            else{
+                if(metodo == 2){
+                    if(datoscola[0] != NULL){
+                        mostrardatos(metodo);
+                        printf("Que pos deseas eliminar: ");
+                        scanf("%d",&pose);
+                        eliminar(pose);
+                    }
+                    else{
+                        printf("El Arreglo no tienen datos\n");
+                        getch();
+                    }
+                }
+                else{
+                    printf("Opc no valida el proceso se reanudara...");
+                    getch();
+                }   
+            }
             break;
 
         case 4:
@@ -129,4 +159,18 @@ int mostrardatos(int dato){
             break;
     }
     getch();
+}
+
+int eliminar (int dato){
+    printf("sadasd");
+    getch();
+    if(dato > 0){
+        for(x=dato-1; x<0; x--){
+            datospila[dato] = datospila[x];
+            printf("Cabio");
+            getch();
+            dato--;
+        }
+    }
+    mostrardatos(1);
 }
