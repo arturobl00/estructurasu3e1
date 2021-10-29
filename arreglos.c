@@ -162,15 +162,15 @@ int mostrardatos(int dato){
 }
 
 int eliminar (int dato){
-    printf("sadasd");
-    getch();
+    printf("Eliminar la pos %d",dato);
     if(dato > 0){
-        for(x=dato-1; x<0; x--){
+        for(x=dato-1; x>=0; x--){
             datospila[dato] = datospila[x];
-            printf("Cabio");
-            getch();
             dato--;
         }
     }
+    datospila[0] = NULL;
+    posdecremento++;
+    printf("Nuevas Posiciones\n");
     mostrardatos(1);
 }
