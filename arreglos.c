@@ -82,7 +82,7 @@ void main(){
                         mostrardatos(metodo);
                         printf("Que pos deseas eliminar: ");
                         scanf("%d",&pose);
-                        eliminar(pose);
+                        eliminar2(pose);
                     }
                     else{
                         printf("El Arreglo no tienen datos\n");
@@ -173,4 +173,18 @@ int eliminar (int dato){
     posdecremento++;
     printf("Nuevas Posiciones\n");
     mostrardatos(1);
+}
+
+int eliminar2 (int dato){
+    printf("Eliminar la pos %d",dato);
+    if(dato < 2){
+        for(x=dato+1; x<=2; x++){
+            datoscola[dato] = datoscola[x];
+            dato++;
+        }
+    }
+    datoscola[2] = NULL;
+    posincremento--;
+    printf("Nuevas Posiciones\n");
+    mostrardatos(2);
 }
